@@ -1,2 +1,2 @@
 # misc
-A collection of miscellanic code
+A collection of miscellaneous code
