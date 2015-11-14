@@ -52,10 +52,8 @@ public class RandomMinCut {
   private void loadNodes(String inputFileName) throws IOException {
     for (String line : Files.readAllLines(Paths.get(inputFileName), StandardCharsets.UTF_8)) {
       String[] parts = line.split("\\s+");
-      Integer.parseInt(parts[0]);
       for (int i = 1; i < parts.length; ++i) {
         try {
-          Integer.parseInt(parts[i]);
           graph.connectNodes(parts[0], parts[i]);
         } catch (NumberFormatException e) {
           System.err.println(i + " is not a number: " + parts[i]);

@@ -21,24 +21,20 @@ public class QuickSortCounter {
     List<Integer> ints = new ArrayList<Integer>(counter.getIntegers());
     System.out.println("Loaded " + counter.getIntegers().size() + " ints:");
     System.out.println("Verifying sortedness: " + counter.isSorted());
-    // printArray(counter.getIntegers());
     counter.countComparisonsPivotingFirst();
     System.out
         .println("Comparisons observed using first element as pivot: " + counter.getComparisons());
     System.out.println("Verifying sortedness: " + counter.isSorted());
-    // printArray(counter.getIntegers());
     counter.setIntegers(ints);
     counter.countComparisonsPivotingLast();
     System.out
         .println("Comparisons observed using last element as pivot: " + counter.getComparisons());
     System.out.println("Verifying sortedness: " + counter.isSorted());
-    // printArray(counter.getIntegers());
     counter.setIntegers(ints);
     counter.countComparisonsPivotingMedianOfThree();
     System.out
         .println("Comparisons observed using last element as pivot: " + counter.getComparisons());
     System.out.println("Verifying sortedness: " + counter.isSorted());
-    // printArray(counter.getIntegers());
   }
 
   public boolean isSorted() {
@@ -183,13 +179,6 @@ public class QuickSortCounter {
         ints.add(Integer.parseInt(line));
       }
     }
-  }
-
-  private static <T> void printArray(List<T> array) {
-    for (T e : array) {
-      System.out.print(e + "\t");
-    }
-    System.out.println();
   }
 
   private long getComparisons() {
