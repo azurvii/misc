@@ -10,6 +10,9 @@ import java.util.HashSet;
 import java.util.PriorityQueue;
 import java.util.Set;
 
+/**
+ * Computes strongly-connected components using Kosaraju's algorithm.
+ */
 public class KosarajuScc {
 
   private static final int EXPECTED_NODES = 1000000;

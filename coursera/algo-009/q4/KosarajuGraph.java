@@ -5,11 +5,10 @@ import java.util.Map;
 
 public class KosarajuGraph {
 
-  private int expectedNodes;
-  private Map<String, KosarajuNode> nodes = new HashMap<>(expectedNodes);
+  private Map<String, KosarajuNode> nodes;
 
   public KosarajuGraph(int expectedNodes) {
-    this.expectedNodes = expectedNodes;
+    nodes = new HashMap<>(expectedNodes);
   }
 
   private KosarajuNode addNode(String nodeLabel) {
